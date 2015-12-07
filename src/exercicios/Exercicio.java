@@ -37,15 +37,17 @@ public class Exercicio {
 
 		// ----------------------------------------------------//
 
-		System.out.println();
-		String[] textoArray = texto.split(" ");
 		int contadorTextoChave = 0;
-		for (int i = 0; i < textoArray.length; i++) {
-			if (textoArray[i].toLowerCase().indexOf("java") == 0) {
-				contadorTextoChave++;
-			}
-		}
-		System.out.println("Ex03: " + contadorTextoChave + " palavras java\n");
+	       String[] textoArray = texto.split(" ");
+	       for (int i = 0; i < textoArray.length; i++){
+	    	   
+	    	  if ((textoArray[i].toLowerCase().replaceAll("[[^0-9a-zA-Z]]+", "").matches("^java$|^java[[\\.,]]"))) {
+	    		  contadorTextoChave++;
+	    	  };
+	    	   
+
+	       }
+	      System.out.println("\nEx03: "+ contadorTextoChave + " palavras java\n");
 
 		// ----------------------------------------------------//
 
