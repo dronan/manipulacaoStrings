@@ -41,7 +41,7 @@ public class Exercicio {
 	       String[] textoArray = texto.split(" ");
 	       for (int i = 0; i < textoArray.length; i++){
 	    	   
-	    	  if ((textoArray[i].toLowerCase().replaceAll("[[^0-9a-zA-Z]]+", "").matches("^java$|^java[[\\.,]]"))) {
+	    	  if ((textoArray[i].toLowerCase().replaceAll("[^a-zA-Z]+", "").matches("^java$|^java"))) {
 	    		  contadorTextoChave++;
 	    	  };
 	    	   
